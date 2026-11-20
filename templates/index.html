@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureLens AI</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">SecureLens <span>AI</span></div>
+        <div class="version">VERSION 1.0</div>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <p class="eyebrow">APPLICATION SECURITY INTELLIGENCE</p>
+
+            <h1>Understand your application's security.</h1>
+
+            <p class="subtitle">
+                Assess security configurations, understand findings,
+                and learn how to improve your application.
+            </p>
+        </section>
+
+        <section class="status-card">
+            <div>
+                <h2>Backend Status</h2>
+                <p id="backend-status">Checking connection...</p>
+            </div>
+
+            <div id="status-indicator" class="status-indicator"></div>
+        </section>
+
+        <section class="assessment-card">
+            <h2>Website Assessment</h2>
+
+            <p>
+                The assessment interface is ready.
+                The passive assessment engine is coming next.
+            </p>
+
+            <label for="website-url">Website URL</label>
+
+            <input
+                type="url"
+                id="website-url"
+                placeholder="https://your-authorized-website.com"
+            >
+
+            <label class="authorization">
+                <input type="checkbox" id="authorization">
+                I confirm that I own this website or have explicit
+                permission to assess it.
+            </label>
+
+            <button id="assess-button">
+                Submit Assessment
+            </button>
+
+            <p id="assessment-message"></p>
+        </section>
+
+        <footer>
+            SecureLens AI · Built for safer applications
+        </footer>
+
+    </main>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+</html>
